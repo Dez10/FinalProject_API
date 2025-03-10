@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Search</h1>
+        <input type="search" id="search-input" placeholder="Search for a movie...">
+        <button id="search-btn">Search</button>
+    </header>
+    <main id="movie-container">
+        <!-- Skeleton loading state -->
+        <div class="skeleton-loader" id="skeleton-loader">
+            <div class="skeleton-poster"></div>
+            <div class="skeleton-info">
+                <div class="skeleton-title"></div>
+                <div class="skeleton-year"></div>
+            </div>
+        </div>
+        <!-- Movie results will be rendered here -->
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

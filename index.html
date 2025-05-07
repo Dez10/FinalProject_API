@@ -3,26 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Search</title>
     <link rel="stylesheet" href="style.css">
+    <title>Movie App</title>
 </head>
 <body>
     <header>
-        <h1>Movie Search</h1>
-        <input type="search" id="search-input" placeholder="Search for a movie...">
-        <button id="search-btn">Search</button>
+        <form id="form">
+            <input 
+                type="text" 
+                id="search" 
+                placeholder="Search" 
+                class="search"
+                autocomplete="off"
+            >
+        </form>
+        <nav class="navbar">
+            <div class="logo">Movie App</div>
+            <ul class="nav-links">
+                <li><a href="#" id="home-link" class="active">Home</a></li>
+                <li><a href="#" id="search-results" class="hidden">Search Results</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>        
     </header>
-    <main id="movie-container">
-        <!-- Skeleton loading state -->
-        <div class="skeleton-loader" id="skeleton-loader">
-            <div class="skeleton-poster"></div>
-            <div class="skeleton-info">
-                <div class="skeleton-title"></div>
-                <div class="skeleton-year"></div>
-            </div>
-        </div>
-        <!-- Movie results will be rendered here -->
-    </main>
+
+    <div id="tags"></div>
+
+    <main id="main"></main>
+
+    <div class="pagination">
+        <div id="prev" class="page">Previous</div>
+        <div id="current" class="current">1</div>
+        <div id="next" class="page">Next</div>
+    </div>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content" id="overlay-content"></div>
+        <a class="arrow left-arrow" id="left-arrow">&#8656;</a>
+        <a class="arrow right-arrow" id="right-arrow">&#8658;</a>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
+
+
